@@ -4,6 +4,7 @@ using Android.OS;
 using Android.Runtime;
 using Android.Views;
 using Android.Widget;
+using Java.Lang;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -38,8 +39,11 @@ namespace Tarea2024_03_05
 
         private void Ls_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            string id = ds.Tables[0].Rows[e.Position]["idContacto"].ToString();
-            Toast.MakeText(this,id,ToastLength.Long).Show();
+            int id = Convert.ToInt32( ds.Tables[0].Rows[e.Position]["idContacto"]);
+            //Toast.MakeText(this,id,ToastLength.Long).Show();
+            Intent i1 = new Intent(this,typeof(AcDetalles));
+            i1.PutExtra("idc",id);
+            StartActivity(i1);
         }
 
         private void Btnadd_Click(object sender, EventArgs e)

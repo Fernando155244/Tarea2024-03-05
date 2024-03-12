@@ -17,9 +17,11 @@ namespace Tarea2024_03_05
         protected override void OnCreate(Bundle savedInstanceState)
         {
             base.OnCreate(savedInstanceState);
-
+            int id = this.Intent.GetIntExtra("idc",0);
             // Create your application here
             SetContentView(Resource.Layout.Detalles);
+            TextView txtnombre = this.FindViewById<TextView>(Resource.Id.txtNombre);
+            txtnombre.Text = id.ToString();
         }
     }
 }
