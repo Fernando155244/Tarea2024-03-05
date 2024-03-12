@@ -35,6 +35,20 @@ namespace Tarea2024_03_05
             ds = ws.Agenda_DetalleContacto(id);
             return ds;
         }
+        public DataSet paises()
+        {
+            WebReference.Service1 ws = new WebReference.Service1();
+            DataSet ds = new DataSet();
+            ds = ws.Agenda_CargaPaises();
+            return ds;
+        }
+        public int AgregarContactos(string nom, string tel, string email, int edad, int idPais)
+        {
+            WebReference.Service1 ws = new WebReference.Service1();
+            int res = 0;
+            res = ws.Agenda_AgregaContacto(nom, tel, email, edad, idPais);
+            return res;
+        }
 
     }
 }

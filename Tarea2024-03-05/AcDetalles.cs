@@ -12,10 +12,6 @@ using System.Text;
 
 namespace Tarea2024_03_05
 {
-    /*Subir a git
-     git add .
-    git commit -m "Ahora con todos los datos y botones con emojis"
-    git push*/
     [Activity(Label = "AcDetalles")]
     public class AcDetalles : Activity
     {

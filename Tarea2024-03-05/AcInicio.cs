@@ -39,15 +39,16 @@ namespace Tarea2024_03_05
 
         private void Ls_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {
-            int id = Convert.ToInt32( ds.Tables[0].Rows[e.Position]["idContacto"]);
+            int id = Convert.ToInt32(ds.Tables[0].Rows[e.Position]["idContacto"]);
             //Toast.MakeText(this,id,ToastLength.Long).Show();
-            Intent i1 = new Intent(this,typeof(AcDetalles));
-            i1.PutExtra("idc",id);
+            Intent i1 = new Intent(this, typeof(AcDetalles));
+            i1.PutExtra("idc", id);
             StartActivity(i1);
         }
 
         private void Btnadd_Click(object sender, EventArgs e)
         {
+
             StartActivity(typeof(AcContactos));
         }
 
