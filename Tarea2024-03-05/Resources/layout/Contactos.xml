@@ -21,7 +21,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtAddNombre" />
+            android:id="@+id/txtAddNombre"
+            android:gravity="center" />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -39,7 +40,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtAddTelefono" />
+            android:id="@+id/txtAddTelefono" 
+            android:gravity="center"/>
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -57,7 +59,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtAddEmail" />
+            android:id="@+id/txtAddEmail" 
+            android:gravity="center"/>
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -75,7 +78,8 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:id="@+id/txtAddEdad" />
+            android:id="@+id/txtAddEdad" 
+            android:gravity="center"/>
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"

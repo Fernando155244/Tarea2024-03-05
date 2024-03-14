@@ -28,6 +28,7 @@ namespace Tarea2024_03_05
             clsDatos datos = new clsDatos();
             ds = datos.paises();
 
+
             Spinner spPaises = this.FindViewById<Spinner>(Resource.Id.spAddPais);
 
             ArrayAdapter adap = new ArrayAdapter(this, Android.Resource.Layout.SimpleSpinnerItem);

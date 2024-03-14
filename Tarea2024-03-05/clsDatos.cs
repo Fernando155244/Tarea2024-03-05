@@ -58,6 +58,13 @@ namespace Tarea2024_03_05
             res = ws.Agenda_BorraContacto(id);
             return res;
         }
+        public int EditarContacto (int id, string nom, string tel, string email, int edad, int idPais)
+        {
+            WebReference.Service1 ws = new WebReference.Service1();
+            int res = 0;
+            res = ws.Agenda_EditaContacto(id, nom, tel, email, edad, idPais);
+            return res;
+        }
 
     }
 }
