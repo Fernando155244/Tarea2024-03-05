@@ -36,6 +36,14 @@ namespace Tarea2024_03_05
 
             ls.Adapter = new miAdap(this, ds);
         }
+        protected override void OnResume()
+        {
+            base.OnResume();
+            ListView l1 = this.FindViewById<ListView>(Resource.Id.lsContactos);
+            clsDatos datos = new clsDatos();
+            ds = datos.cargarContactos();
+            l1.Adapter = new miAdap(this, ds);
+        }
 
         private void Ls_ItemClick(object sender, AdapterView.ItemClickEventArgs e)
         {

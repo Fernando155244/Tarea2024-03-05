@@ -49,6 +49,15 @@ namespace Tarea2024_03_05
             res = ws.Agenda_AgregaContacto(nom, tel, email, edad, idPais);
             return res;
         }
+        public int EliminaContacto(int id)
+        {
+
+
+            WebReference.Service1 ws = new WebReference.Service1();
+            int res = 0;
+            res = ws.Agenda_BorraContacto(id);
+            return res;
+        }
 
     }
 }

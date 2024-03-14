@@ -57,7 +57,19 @@ namespace Tarea2024_03_05
             {
                 Toast.MakeText(this,"Usuarios Ingresado",ToastLength.Short).Show();
                 Finish();
+            }else
+            {
+                AlertDialog a1 = new AlertDialog.Builder(this).Create();
+                a1.SetTitle("Alerta de seguridad 🗿");
+                a1.SetMessage("No todos los datos del contacto estan llenos\nReviselos");
+                a1.SetButton("OK", btnOK);
+                a1.Show();
             }
+        }
+
+        private void btnOK(object sender, DialogClickEventArgs e)
+        {
+            throw new NotImplementedException();
         }
     }
 }

@@ -21,7 +21,7 @@ namespace Tarea2024_03_05
             base.OnCreate(savedInstanceState);
 
             // Create your application here
-            SetContentView(Resource.Layout.Ediciones);
+            SetContentView(Resource.Layout.Contactos);
         }
     }
 }

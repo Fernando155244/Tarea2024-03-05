@@ -30,13 +30,49 @@ namespace Tarea2024_03_05
             TextView txtemail = this.FindViewById<TextView>(Resource.Id.txtEmail);
             TextView txtedad = this.FindViewById<TextView>(Resource.Id.txtEdad);
             TextView txtpais = this.FindViewById<TextView>(Resource.Id.txtPaís);
+            Button btnborrar = this.FindViewById<Button>(Resource.Id.btnEliminar);
+            Button btneditar = this.FindViewById<Button>(Resource.Id.btnEditar);
 
             txtnombre.Text = ds.Tables[0].Rows[0]["nombre"].ToString();
             txttelefono.Text = ds.Tables[0].Rows[0]["telefono"].ToString();
             txtemail.Text = ds.Tables[0].Rows[0]["email"].ToString();
             txtedad.Text = ds.Tables[0].Rows[0]["edad"].ToString();
             txtpais.Text = ds.Tables[0].Rows[0]["pais"].ToString();
+            btnborrar.Click += Btnborrar_Click;
+        }
 
+        private void Btnborrar_Click(object sender, EventArgs e)
+        {
+            AlertDialog a1 = new AlertDialog.Builder(this).Create();
+            a1.SetTitle("💀¿Desceas borrar este contacto?💀");
+            a1.SetMessage("Si borras no podras recuperarlo!");
+            a1.SetButton("Borrar", btnSi);
+            a1.SetButton2("Cancelar", btnNo);
+            a1.Show();
+        }
+
+        private void btnNo(object sender, DialogClickEventArgs e)
+        {
+            Toast.MakeText(this, "Cancelado", ToastLength.Short).Show();
+        }
+
+        private void btnSi(object sender, DialogClickEventArgs e)
+        {
+            clsDatos datos = new clsDatos();
+            int id = this.Intent.GetIntExtra("idc", 0);
+            if (id != 0)
+            {
+                Toast.MakeText(this, "Usuarios Eliminado", ToastLength.Short).Show();
+                Finish();
+            }
+            else
+            {
+                Toast.MakeText(this, "Alerta de seguridad 🗿\nEl usuario no ha podido ser borrado!", ToastLength.Long).Show();
+            }
+        }
+
+        private void btnOK(object sender, DialogClickEventArgs e)
+        {
         }
     }
 }
